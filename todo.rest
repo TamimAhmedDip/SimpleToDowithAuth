@@ -6,36 +6,10 @@ POST http://localhost:5001/auth/register
 Content-Type: application/json
 
 {
-    "username": "dip@gmail.com",
-    "password": "123456"
-}
-
-###
-POST http://localhost:5001/auth/register
-Content-Type: application/json
-
-{
     "username": "aru@gmail.com",
     "password": "123456"
 }
 
-###
-POST http://localhost:5001/auth/register
-Content-Type: application/json
-
-{
-    "username": "tamim@gmail.com",
-    "password": "abcd1234"
-}
-
-###
-POST http://localhost:5001/auth/register
-Content-Type: application/json
-
-{
-    "username": "dipu@gmail.com",
-    "password": "123456789"
-}
 
 ### Login
 
@@ -44,32 +18,8 @@ Content-Type: application/json
 
 {
     "username": "aru@gmail.com",
-    "password": "123456789askdhaskdhj"
-}
-
-###
-POST http://localhost:5001/auth/login
-Content-Type: application/json
-
-{
-    "username": "dip@gmail.com",
     "password": "123456"
 }
 
-###
-POST http://localhost:5001/auth/login
-Content-Type: application/json
-
-{
-    "username": "dipu@gmail.com",
-    "password": "abcdefgh"
-}
-
-###
-POST http://localhost:5001/auth/login
-Content-Type: application/json
-
-{
-    "username": "tamim@gmail.com",
-    "password": "abcd1234"
-}
+### Get a todo (unauthorized)
+GET http://localhost:5001/todos

@@ -14,7 +14,11 @@ router.get('/', (req, res) => {
 
 //add a todo 
 router.post('/', (req, res) => {
-    
+    const {task} = req.body
+    const insertTodo = db.prepare('INSERT into todos(user_id, task) VALUES(?, ?)')
+    const result = insertTodo.run(req.userId, task)
+
+    res.json({id: req.userId, task, completed: 0})
 })
 
 //update a todo
