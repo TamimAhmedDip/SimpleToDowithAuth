@@ -23,3 +23,14 @@ Content-Type: application/json
 
 ### Get a todo (unauthorized)
 GET http://localhost:5001/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzODk4MzU3LCJleHAiOjE3OTM5ODQ3NTd9.O5GRX9JuOWO5oKAhSMgkwGiWtowDU4xU9EWFSoMVVxM
+
+
+### Post a todo 
+POST http://localhost:5001/todos 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzODk4MzU3LCJleHAiOjE3OTM5ODQ3NTd9.O5GRX9JuOWO5oKAhSMgkwGiWtowDU4xU9EWFSoMVVxM
+Content-Type: application/json 
+
+{
+    "task": "Finish coding this project"
+}
