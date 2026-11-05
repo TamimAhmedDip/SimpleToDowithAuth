@@ -50,9 +50,20 @@ router.post('/login', (req, res) => {
         const getUser = db.prepare('SELECT * from users WHERE username = ?')
         const user = getUser.get(username)
 
+        //if user is not found
         if(!user){
             return res.send({ "message": "User not found"})
         }
+
+        const passwordMatches = bcrypt.compareSync(password, user.password)
+        if(!passwordMatches){
+            return res.status(401).send({message: "Incorrect password"})
+        }
+        //create a token 
+        const token = jwt.sign({id: user.id}, process.env.JWT_KEY, {
+            expiresIn: '24h',
+        })
+        res.json({ token })
 
     } catch {
         console.log(err.message)
