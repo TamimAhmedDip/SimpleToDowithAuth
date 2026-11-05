@@ -23,7 +23,12 @@ router.post('/', (req, res) => {
 
 //update a todo
 router.put('/:id', (req, res) => {
+    const {completed} = req.body
+    const { id } = req.params
 
+    const updateTodo = db.prepare('UPDATE todos SET completed = ? WHERE id = ?')
+    updateTodo.run(completed, id)
+    res.json({"message": "todo updated!"})
 })
 
 //delete a todo 

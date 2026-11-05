@@ -24,10 +24,10 @@ router.post('/register', (req, res) => {
 
         const defaultTodo = 'Hello :D Add your first todo!'
         const insertTodo = db.prepare(`
-                INSERT into todos(user_id, task)
-                VALUES(?, ?)
+                INSERT into todos(user_id, task, completed)
+                VALUES(?, ?, ?)
             `)
-        insertTodo.run(result.lastInsertRowid, defaultTodo)
+        insertTodo.run(result.lastInsertRowid, defaultTodo, 0)
         console.log('Inserted default todo')
 
         //create a token 
