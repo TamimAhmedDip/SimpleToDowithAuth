@@ -1,0 +1,39 @@
+###
+GET http://localhost:5001
+
+###
+POST http://localhost:5001/auth/register
+Content-Type: application/json
+
+{
+    "username": "dip@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5001/auth/register
+Content-Type: application/json
+
+{
+    "username": "aru@gmail.com",
+    "password": "123456"
+}
+
+### Login
+
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+    "username": "aru",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+    "username": "dip@gmail.com",
+    "password": "123456"
+}

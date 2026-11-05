@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# OS files
+.DS_Store
