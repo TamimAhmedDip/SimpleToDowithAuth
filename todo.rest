@@ -23,12 +23,12 @@ Content-Type: application/json
 
 ### Get a todo (unauthorized)
 GET http://localhost:5001/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyNTE4LCJleHAiOjE3OTM5ODg5MTh9.ziuITvNyXzcdmLyEi19zFhRU88mISSopMtXxcNQjHxE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyODc0LCJleHAiOjE3OTM5ODkyNzR9.g4ttVtCej78HE52B9ZuHU_Encq0nVcjY-LUSLp3Fhy8
 
 
 ### Post a todo 
 POST http://localhost:5001/todos 
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyNTE4LCJleHAiOjE3OTM5ODg5MTh9.ziuITvNyXzcdmLyEi19zFhRU88mISSopMtXxcNQjHxE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyODc0LCJleHAiOjE3OTM5ODkyNzR9.g4ttVtCej78HE52B9ZuHU_Encq0nVcjY-LUSLp3Fhy8
 Content-Type: application/json 
 
 {
@@ -38,9 +38,13 @@ Content-Type: application/json
 
 ###Update a todo 
 PUT http://localhost:5001/todos/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyNTE4LCJleHAiOjE3OTM5ODg5MTh9.ziuITvNyXzcdmLyEi19zFhRU88mISSopMtXxcNQjHxE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAyODc0LCJleHAiOjE3OTM5ODkyNzR9.g4ttVtCej78HE52B9ZuHU_Encq0nVcjY-LUSLp3Fhy8
 Content-type: application/json
 
 {
     "completed": 1
 }
+
+### delete a todo
+DELETE http://localhost:5001/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkzOTAzNDAyLCJleHAiOjE3OTM5ODk4MDJ9.l2l2spa7tXajDoipeh99RYsgU2JUs2WBiJXUZ0HPGHk
