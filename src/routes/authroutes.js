@@ -24,7 +24,7 @@ router.post('/register', (req, res) => {
 
         const defaultTodo = 'Hello :D Add your first todo!'
         const insertTodo = db.prepare(`
-                INSERT into todos(user_id, tasks)
+                INSERT into todos(user_id, task)
                 VALUES(?, ?)
             `)
         insertTodo.run(result.lastInsertRowid, defaultTodo)

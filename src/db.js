@@ -13,7 +13,7 @@ db.exec(`
     CREATE TABLE todos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
-        tasks TEXT,
+        task TEXT,
         completed BOOLEAN,
         FOREIGN KEY(user_id) REFERENCES users(id)
     )

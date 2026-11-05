@@ -24,6 +24,15 @@ POST http://localhost:5001/auth/register
 Content-Type: application/json
 
 {
+    "username": "tamim@gmail.com",
+    "password": "abcd1234"
+}
+
+###
+POST http://localhost:5001/auth/register
+Content-Type: application/json
+
+{
     "username": "dipu@gmail.com",
     "password": "123456789"
 }
@@ -54,4 +63,13 @@ Content-Type: application/json
 {
     "username": "dipu@gmail.com",
     "password": "abcdefgh"
+}
+
+###
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+    "username": "tamim@gmail.com",
+    "password": "abcd1234"
 }
